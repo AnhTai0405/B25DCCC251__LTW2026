@@ -1,0 +1,152 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f3f7f4;
+  color: #1f2937;
+}
+
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background: white;
+}
+
+.app-header {
+  padding: 25px;
+  text-align: center;
+  background: #166534;
+  color: white;
+}
+
+.app-header h1 {
+  margin: 0 0 10px;
+}
+
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 15px;
+  background: #dcfce7;
+}
+
+.nav-link {
+  padding: 12px 18px;
+  color: #166534;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.nav-link.active {
+  background: #166534;
+  color: white;
+}
+
+.main-content {
+  padding: 25px;
+  min-height: 500px;
+}
+
+.page h2 {
+  color: #166534;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  background: #f0fdf4;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.filters input[type="text"] {
+  padding: 10px;
+  width: 280px;
+  max-width: 100%;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+th {
+  background: #166534;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background: #f0fdf4;
+}
+
+button, .btn {
+  padding: 10px 15px;
+  background: #15803d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+button:hover, .btn:hover {
+  background: #166534;
+}
+
+.answer-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.answer {
+  padding: 15px;
+  background: #f1f5f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.correct-answer {
+  background: #bbf7d0;
+  border-color: #16a34a;
+  font-weight: bold;
+}
+
+.app-footer {
+  text-align: center;
+  padding: 20px;
+  background: #dcfce7;
+}
+
+@media (max-width: 600px) {
+  .answer-list {
+    grid-template-columns: 1fr;
+  }
+
+  .main-content {
+    padding: 12px;
+  }
+}
