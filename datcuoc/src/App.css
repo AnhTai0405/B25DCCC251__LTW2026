@@ -1,152 +1,165 @@
 
-* {
-  box-sizing: border-box;
+.supports {
+  margin: 20px 0;
+  padding: 16px;
+  background: #effcf4;
+  border-radius: 10px;
 }
 
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f3f7f4;
-  color: #1f2937;
+.support-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.support-actions button {
+  background: #15803d;
+  color: white;
+  border: 0;
+  border-radius: 6px;
+  padding: 12px 18px;
+  cursor: pointer;
+}
+
+.support-actions button:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+}
+
+.bet-section {
+  margin: 20px 0;
+  padding: 18px;
+  border: 1px solid #d1fae5;
+  border-radius: 8px;
+}
+
+.bet-section select {
+  padding: 8px;
+  margin-right: 12px;
+}
+
+.bet-section button {
+  display: block;
+  margin-top: 15px;
+  padding: 12px 20px;
+  background: #15803d;
+  color: white;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.hint {
+  padding: 12px;
+  border-left: 4px solid #16a34a;
+  background: #f0fdf4;
 }
 
 .app-container {
   max-width: 1200px;
   margin: 0 auto;
-  min-height: 100vh;
   background: white;
+  min-height: 100vh;
 }
 
 .app-header {
-  padding: 25px;
-  text-align: center;
   background: #166534;
   color: white;
+  text-align: center;
+  padding: 32px 20px;
 }
 
 .app-header h1 {
-  margin: 0 0 10px;
+  margin: 0 0 16px;
+  color: white;
 }
 
-.navbar {
+.app-nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  padding: 15px;
+  gap: 12px;
   background: #dcfce7;
+  padding: 15px;
 }
 
-.nav-link {
-  padding: 12px 18px;
+.app-nav a {
   color: #166534;
   text-decoration: none;
-  border-radius: 8px;
+  padding: 12px 18px;
   font-weight: bold;
+  border-radius: 7px;
 }
 
-.nav-link.active {
+.app-nav a.active {
   background: #166534;
   color: white;
 }
 
 .main-content {
-  padding: 25px;
-  min-height: 500px;
+  padding: 24px;
+  min-height: 300px;
 }
 
-.page h2 {
-  color: #166534;
-}
-
-.filters {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 15px;
-  padding: 20px;
-  background: #f0fdf4;
-  border-radius: 10px;
-  margin-bottom: 20px;
-}
-
-.filters input[type="text"] {
-  padding: 10px;
-  width: 280px;
-  max-width: 100%;
-  border: 1px solid #aaa;
-  border-radius: 6px;
-}
-
-.table-wrapper {
-  overflow-x: auto;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-th, td {
-  padding: 12px;
-  border: 1px solid #ddd;
-  text-align: left;
-}
-
-th {
-  background: #166534;
-  color: white;
-}
-
-tr:nth-child(even) {
-  background: #f0fdf4;
-}
-
-button, .btn {
-  padding: 10px 15px;
-  background: #15803d;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  text-decoration: none;
-}
-
-button:hover, .btn:hover {
-  background: #166534;
+.app-footer {
+  background: #dcfce7;
+  text-align: center;
+  padding: 24px;
 }
 
 .answer-list {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 15px;
-  margin: 20px 0;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 20px;
 }
 
-.answer {
-  padding: 15px;
-  background: #f1f5f9;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-}
-
-.correct-answer {
-  background: #bbf7d0;
-  border-color: #16a34a;
-  font-weight: bold;
-}
-
-.app-footer {
-  text-align: center;
-  padding: 20px;
-  background: #dcfce7;
+.answer-list button {
+  color: white;
+  border: none;
+  border-radius: 6px;
 }
 
 @media (max-width: 600px) {
   .answer-list {
     grid-template-columns: 1fr;
   }
+}
 
-  .main-content {
-    padding: 12px;
-  }
+.app-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 15px;
+  background-color: #dcfce7;
+}
+
+.app-nav a {
+  display: inline-block;
+  padding: 12px 18px;
+  color: #166534;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 7px;
+}
+
+.app-nav a.active {
+  color: white;
+  background-color: #166534;
+}
+
+.page > button,
+.page form button,
+.page .start-button {
+  background-color: #15803d;
+  color: white;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.page > button:hover,
+.page form button:hover,
+.page .start-button:hover {
+  background-color: #166534;
 }

@@ -4,32 +4,16 @@ import { NavLink } from 'react-router-dom';
 
 const NavBar = () => {
   return (
-    <nav className="navbar">
-      <NavLink
-        to="/"
-        end
-        className={({ isActive }) =>
-          isActive ? 'nav-link active' : 'nav-link'
-        }
-      >
+    <nav className="app-nav">
+      <NavLink to="/" end>
         Trang chủ
       </NavLink>
 
-      <NavLink
-        to="/questions"
-        className={({ isActive }) =>
-          isActive ? 'nav-link active' : 'nav-link'
-        }
-      >
+      <NavLink to="/questions">
         Ngân hàng câu hỏi
       </NavLink>
 
-      <NavLink
-        to="/history"
-        className={({ isActive }) =>
-          isActive ? 'nav-link active' : 'nav-link'
-        }
-      >
+      <NavLink to="/history">
         Lịch sử
       </NavLink>
     </nav>
