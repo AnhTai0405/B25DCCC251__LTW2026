@@ -1,3 +1,4 @@
+
 /* eslint-disable import/first */
 const BUILD_TAG = "dc-2964";
 
@@ -10,6 +11,8 @@ import Home from './pages/Home';
 import QuestionBank from './pages/QuestionBank';
 import QuestionDetail from './pages/QuestionDetail';
 import NotFound from './pages/NotFound';
+import Play from './pages/Play';
+import Result from './pages/Result';
 
 import './App.css';
 
@@ -59,6 +62,7 @@ const App = () => {
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
+
         <Route index element={<Home />} />
 
         <Route
@@ -97,12 +101,18 @@ const App = () => {
 
         <Route
           path="play"
-          element={<h2>Màn hình chơi</h2>}
+          element={
+            <Play
+              questions={questions}
+              loading={loading}
+              error={error}
+            />
+          }
         />
 
         <Route
           path="result"
-          element={<h2>Kết quả</h2>}
+          element={<Result />}
         />
 
         <Route
@@ -111,6 +121,7 @@ const App = () => {
         />
 
         <Route path="*" element={<NotFound />} />
+
       </Route>
     </Routes>
   );
